@@ -54,6 +54,8 @@ def clean_report(df):
     df2['Freezer Name'] = df2['Location path'].str.split(" - ", n = 0, expand = True)[0]
     
     df2["Name"] = [x if isinstance(x, str) and 'F' in x else f"F{x}" for x in df2["Name"].tolist()]
+    df2["Name"] = [a.strip() if a == 1 else a.strip() for a in df2["Name"].tolist()]
+    df2["Name"] = df2["Name"].str.split(n = 1, expand = True)[0]
     ogsite = {"F1" : "Pitt", "F2" : "KUMC",  "F3" : "NEU"}
     df2['Original Site'] =  df2['Name'].str[:2].map(ogsite) 
     cursite = { "NEU" : "NEU", "KUMC" : 'KUMC', 'Kirk' : 'Pitt', 'Chest' : 'Pitt', 'In' : "In Transit"}
