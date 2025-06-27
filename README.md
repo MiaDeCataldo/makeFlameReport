@@ -4,7 +4,9 @@ This program is designed to make a report from the Marsland Lab eLabNext downloa
 ## Set-up
 1. Running this program requires Python. Check that Python is installed on your computer.
    - From Terminal (Mac) or Command Prompt (Windows) enter ```python --version```. If python is not installed download from https://www.python.org/downloads/
-3. Download the source code. Save to a convenient location for you.
+2. Download the source code. Save to a convenient location for you.
+3. Install dependancies via command prompt:
+   - install pandas using ```pip install pd``` 
 
 If program was sent to you as an executable, you will not need to download the **.py** file. Follow the "Using the program" steps below. Make sure the ***makeFlameReport.exe*** and the ***_internal*** file stay saved together.
 
